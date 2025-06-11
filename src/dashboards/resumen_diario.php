@@ -11,10 +11,29 @@ $ventas = obtenerVentasPorDia($fecha);
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Resumen Diario de Ventas</title>
-    <link rel="stylesheet" href="assets/css/style.css"> 
+    <title>Productos | Orion BI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <style>
+        .table thead th {
+            background: #232946;
+            color: #fff;
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(67, 97, 238, 0.08);
+            background: #fff;
+        }
+        .chart-container {
+            height: 350px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+<?php include '../../public/navbar.php'; ?>
     <h1>Resumen de Ventas - <?= htmlspecialchars($fecha) ?></h1>
     <table border="1" cellpadding="5">
         <tr>

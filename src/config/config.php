@@ -1,10 +1,10 @@
 <?php
 // src/config/config.php
 
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'dataepis.uandina.pe:49206');
 define('DB_NAME', 'supermercado');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_USER', 'luissalas');
+define('DB_PASS', 'luissalas2025');
 
 // Crear conexión PDO
 try {

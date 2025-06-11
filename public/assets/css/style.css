@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 2rem;
   background-color: var(--secondary-color);
@@ -56,7 +56,8 @@ table:hover {
   box-shadow: var(--shadow-strong);
 }
 
-th, td {
+th,
+td {
   padding: 1rem 1.5rem;
   text-align: left;
   border-bottom: 1px solid var(--border-color);
@@ -136,7 +137,8 @@ button:disabled,
     border-radius: 8px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
   }
@@ -147,4 +149,111 @@ button:disabled,
     padding: 0.75rem;
     font-size: 1.1rem;
   }
+}
+
+/* Sidebar y layout principal */
+.sidebar {
+  min-height: 100vh;
+  background: #232946;
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  position: fixed;
+  width: 230px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.sidebar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.sidebar .nav-link {
+  color: #b8c1ec;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  color: #fff;
+  background: #393e6e;
+}
+.sidebar .bx {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+.main-content {
+  margin-left: 250px;
+  padding: 2rem 2rem 1rem 2rem;
+}
+@media (max-width: 991px) {
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    padding: 1rem;
+  }
+}
+/* Tarjetas KPI */
+.kpi-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(67, 97, 238, 0.08);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.kpi-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #232946;
+}
+.kpi-label {
+  color: #6c757d;
+  font-size: 1rem;
+}
+.kpi-trend-up {
+  color: #27ae60;
+  font-size: 0.95rem;
+}
+.kpi-trend-down {
+  color: #e74c3c;
+  font-size: 0.95rem;
+}
+/* Tarjetas y tablas */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(67, 97, 238, 0.08);
+  background: #fff;
+}
+.table thead th {
+  background: #232946;
+  color: #fff;
+}
+.table tbody tr {
+  transition: background 0.2s;
+}
+.table tbody tr:hover {
+  background: #f4f6fa;
+}
+.badge.bg-success {
+  background: #27ae60 !important;
+}
+.badge.bg-warning {
+  background: #f39c12 !important;
+}
+.badge.bg-danger {
+  background: #e74c3c !important;
 }
